@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
 import { Person } from './person';
 import { PersonService } from './person.service';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'person-list',
@@ -14,9 +14,13 @@ export class PersonListComponent implements OnInit {
   persones: Person[];
   mode: string = "Observable";
 
-  constructor(private personService: PersonService) { }
+  constructor(private personService: PersonService,
+  private router:Router) { }
 
-  ngOnInit() { this.getPersones(); }
+
+  ngOnInit() {
+    // this.router.navigateByUrl('../second-list/second-list');
+    this.getPersones(); }
 
   getPersones() {
     this.personService.getPersones()

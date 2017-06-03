@@ -14,7 +14,7 @@ import { Person } from './person';
     <div *ngIf="isEdit === false">
         <button (click)="isEdit=true">수정</button>
     </div>`,
-    styles: [`/*div{float:left}*/`]
+    styles: [`/*div{fl4oat:left}*/`]
 })
 export class ItemEditComponent {
     @Input() persons: Person;
